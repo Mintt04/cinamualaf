@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style11.css">
+    <title>Amin Website</title>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Clock</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        #clock {
+            font-size: 3em;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <img src="logo.png" alt="logo PSP" width="350" height="150">
+        <h1>HI MY NAME IS AMIN</h1>
+		<div id="clock"></div>
+
+    <script>
+        function updateClock() {
+            var now = new Date();
+            var hours = now.getHours();
+            var minutes = now.getMinutes();
+            var seconds = now.getSeconds();
+
+            hours = hours < 10 ? "0" + hours : hours;
+            minutes = minutes < 10 ? "0" + minutes : minutes;
+            seconds = seconds < 10 ? "0" + seconds : seconds;
+
+            var timeString = hours + ":" + minutes + ":" + seconds;
+
+            document.getElementById("clock").innerHTML = timeString;
+        }
+        setInterval(updateClock, 1000);
+        updateClock();
+    </script>
+        <h3>JTMK is the Department of Information and Communication Technology (JTMK) offering DDT courses (Diploma in Information Technology (Digital Technology)) at Seberang Perai Polytechnic (PSP).</h3>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="exercise.html">Exercise</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="Home">
+        <h2>MY PHOTO</h2>
+        <img src="mintt.jpg" alt="mintt's Photo" width="400" height="370">
+    </section>
+
+    <footer>
+        <p>&copy; 2023 AMIN. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script> 
+</body>
+
+</html>
